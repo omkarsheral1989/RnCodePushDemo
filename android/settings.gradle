@@ -1,0 +1,3 @@
+rootProject.name = 'PushApp1'
+
+include ':app'
