@@ -38,15 +38,15 @@ class App extends Component<Props> {
   }
   
   componentDidMount() {
-    // HockeyApp.start();
-    // HockeyApp.checkForUpdate(); // optional
+    HockeyApp.start();
+    HockeyApp.checkForUpdate();
   }
   
   render() {
     return (
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Welcome to React Native!14
+            Welcome to React Native!16
           </Text>
           <Image
               source={require('../images/main_screen_footer_logo.png')}
@@ -57,7 +57,7 @@ class App extends Component<Props> {
               }}
           />
           <Text style={styles.instructions}>
-            To get started, edit App.js. New apk upload3
+            To get started, edit App.js
           </Text>
           <Text style={styles.instructions}>
             {instructions}
