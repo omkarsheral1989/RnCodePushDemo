@@ -28,7 +28,7 @@ class App extends Component<Props> {
     return (
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Welcome to React Native!12
+            Welcome to React Native!16
           </Text>
           <Image
               source={require('../images/main_screen_footer_logo.png')}
