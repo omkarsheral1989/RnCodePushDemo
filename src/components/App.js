@@ -14,6 +14,8 @@ import {
 } from 'react-native';
 import codePush from "react-native-code-push";
 
+import HockeyApp from 'react-native-hockeyapp';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
   'Cmd+D or shake for dev menu',
@@ -21,14 +23,30 @@ const instructions = Platform.select({
   'Shake or press menu button for dev menu',
 });
 
+const isIos = Platform.OS === 'ios';
+
 type Props = {};
 
 class App extends Component<Props> {
+  
+  componentWillMount() {
+    if (isIos) {
+    
+    } else {
+      HockeyApp.configure("09825bd9ad334bce93a659aed0fc42fb", true);
+    }
+  }
+  
+  componentDidMount() {
+    // HockeyApp.start();
+    // HockeyApp.checkForUpdate(); // optional
+  }
+  
   render() {
     return (
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Welcome to React Native!12
+            Welcome to React Native!14
           </Text>
           <Image
               source={require('../images/main_screen_footer_logo.png')}
@@ -39,7 +57,7 @@ class App extends Component<Props> {
               }}
           />
           <Text style={styles.instructions}>
-            To get started, edit App.js
+            To get started, edit App.js. New apk upload3
           </Text>
           <Text style={styles.instructions}>
             {instructions}

@@ -9,6 +9,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
+import com.slowpath.hockeyapp.RNHockeyAppModule; // <--- import
+import com.slowpath.hockeyapp.RNHockeyAppPackage;  // <--- import
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new RNHockeyAppPackage(MainApplication.this), // <------ add this line
             new CodePush("Be2yhytjVKA-aBkHKXqQF8X6Ya7TSJe2E1YfX", getApplicationContext(), BuildConfig.DEBUG)
       );
     }
