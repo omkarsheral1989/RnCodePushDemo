@@ -6,11 +6,16 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=\"iPhone 8 Plus\""
+    "ios": "react-native run-ios --simulator=\"iPhone 8 Plus\"",
+    "log-android": "react-native log-android",
+    "log-ios": "react-native log-ios",
+    "push-android": "appcenter codepush release-react -a omkar.sheral.1989/PushApp1",
+    "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && npm install"
   },
   "dependencies": {
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-native-code-push": "^5.3.5"
   },
   "devDependencies": {
     "babel-jest": "23.2.0",
